@@ -1,8 +1,8 @@
-number = int(input("Enter a number: "))
-
-if number > 5:
-    print("The number is greater than 5.")
-elif number < 5:
-    print("The number is less than 5.")
+age = int(input("Enter your age: "))
+if age >= 10:
+    if age <= 20:
+        print("Your age is : ", age, "\n you are allowed to enter the class")
+    else:
+        print("Your age is : ", age, "\n you are not allowed to enter the class")
 else:
-    print("The number is equal to 5.")
+    print("Your age is : ", age, "\n you are not eligible")
