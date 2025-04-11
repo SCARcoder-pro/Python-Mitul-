@@ -1,7 +1,14 @@
-height = int(input("Enter your height in cm: "))
-marks = int(input("Enter your marks: "))
+text = input(("Enter the Sentence: "))
+text = text.split()
+bigWordLen = 0
 
-if height > 180 or marks > 60:
-    print("You are allowed to join the police force")
-elif height < 180 or marks < 60:
-    print("You are not allowed to join the police force")
+for wrd in text:
+    wordLen = len(wrd)
+    if wordLen > bigWordLen:
+        bigWordLen = wordLen
+        
+print("\n Largest Word: ")
+for wrd in text:
+    wordLen = len(wrd)
+    if wordLen == bigWordLen:
+        print(wrd)
