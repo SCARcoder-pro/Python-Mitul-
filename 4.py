@@ -1,12 +1,20 @@
-num = int(input("Enter a number: "))
-rev = 0
-temp = num
-while temp > 0:
-    rem = temp%10
-    rev = rem + (rev*10)
-    temp = int(temp/10)
+rowNum = 5
+space = rowNum - 1
 
-if rev==num:
-    print("\nIt is a palindrome number")
-else:
-    print("\nIt is not a palindrome number")
+for i in range(1, rowNum + 1):
+    for j in range(1, space + 1):
+        print(end=" ")
+    space = space - 1
+
+    for j in range(2*i+1):
+        print(end="*")
+    print()
+    space = 1
+
+    for i in range(1, rowNum):
+        for j in range(1, space + 1):
+            print(end=" ")
+        space = space + 1
+        for j in range(1, 2*(rowNum - i)):
+            print(end="*")
+        print()
