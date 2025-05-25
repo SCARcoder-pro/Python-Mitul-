@@ -1,7 +1,14 @@
-def weather_condition():
-    print("weather is pleasant in",spring)
-    print("weather is same in",autumn)
+weather = [1,0,0,0,1,1,0]
+sunny=0
+rainy=0
 
-spring = "autumn"
-autumn = "winter"
-weather_condition()
+for i in range(0,7):
+    if weather[i] == 1:
+        sunny += 1
+    else:
+        rainy += 1
+
+if(sunny>rainy):
+    print("Good Weather")
+else:
+    print("Bad Weather")
