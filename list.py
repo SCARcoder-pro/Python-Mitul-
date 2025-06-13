@@ -1,12 +1,7 @@
-empty_list = []
-print()
+numbers = input("Enter numbers separated by spaces: ").split()
+numbers = [int(num) for num in numbers]
 
-numbers = [1, 2, 3, 4, 5]
-print(numbers)
+even_squares = [num ** 2 for num in numbers if num % 2 == 0]
 
-triples = [1, 2, 3] * 3
-print(triples)
-
-aList = [100, 200, 300, 400, 500]
-aList = aList[::-1]
-print(aList, "\n")
+print("Original list:", numbers)
+print("Squares of even numbers:", even_squares)
