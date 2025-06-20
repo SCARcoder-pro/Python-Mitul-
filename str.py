@@ -1,10 +1,13 @@
-string = input("Please enter your own word: ")
-char = input("Please enter a character: ")
-i = 0
-count = 0
-while( i < len(string)):
-    if string[i] == char:
-        count += 1
-    i += 1
+class IOString():
+    def __init__(self):
+        self.str1 = ""
+    
+    def get_String(self):
+        self.str1 = input("Enter a string: ")
+        
+    def print_String(self):
+        print("Result is: ", self.str1.upper())
 
-print("The total Number of Times", char, "has occured = ", count)
+strl1 = IOString()
+strl1.get_String()
+strl1.print_String()
