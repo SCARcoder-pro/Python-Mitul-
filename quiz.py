@@ -1,30 +1,22 @@
-print("Welcome To General Knowledge Quiz!")
-print("What is the highest peak in the world?")
-print("1. Mount Everest")
-print("2. Mount Fuji")
-print("3. Mount Kilimanjaro")
-choice = input("Enter your choice: ")
-if choice == "1":
-    print("Correct Answer!")
-else:
-    print("Sorry! Wrong Answer!")
+import random
+class FruitQuiz:
+    def __init__(self):
+        self.fruits = {'apple':'red', 'orange':'orange', 'watermelon':'green', 'banana':'yellow'}
+    
+    def quiz(self):
+        while(True):
+            fruit, color = random.choice(list(self.fruits.items()))
+            print("What is the color of {}".format(fruit))
+            user_answer = input()
+            if (user_answer.lower() == color):
+                print("Correct Answer!")
+            else:
+                print("Wrong Answer")
+            
+            option = int(input("Enter 0 to continue or 1 to exit: "))
+            if (option):
+                break
 
-print("What is the most famous sport in the world?")
-print("1. Cricket")
-print("2. Football")
-print("3. Basketball")
-choice = input("Enter your choice: ")
-if choice == "2":
-    print("Correct Answer!")
-else:
-    print("Sorry! Wrong Answer!")
-
-print("What is the most famous indoor game in the world?")
-print("1. Carrom")
-print("2. Ludo")
-print("3. Chess")
-choice = input("Enter your choice: ")
-if choice == "3":
-    print("Correct Answer!")
-else:
-    print("Sorry! Wrong Answer!")
+print("Welcome to the Fruit Quiz!")
+fq = FruitQuiz()
+fq.quiz()
