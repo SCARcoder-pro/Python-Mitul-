@@ -1,24 +1,9 @@
-name = "Penguin"
-age = 15
-is_student = True
-weight = 38.5
+import pandas as pd
+import numpy as np
 
-print("Name : ", name)
-print("Data type of name : ", type(name))
+exam_data = {'name': ['Anastasia', 'Dima', 'Katherine', 'James', 'Emily', 'Michael', 'Matthew', 'Laura', 'Kevin', 'Jonas'], 'score': [12.5, 9, 16.5, np.nan, 9, 20, 14.5, np.nan, 8, 19], 'attempts': [1, 3, 2, 3, 2, 3, 1, 1, 2, 1], 'qualify': ['yes', 'no', 'yes', 'no', 'no', 'yes', 'yes', 'no', 'no', 'yes']}
+labels = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
 
-print("Age : ", age)
-print("Data type of age : ", type(age))
-
-print("Is Student : ", is_student)
-print("Data type of is_student : ", type(is_student))
-
-print("Weight : ", weight)
-print("Data type of weight : ", type(weight))
-
-print("\n After type casting....")
-age = str(age)
-print(age)
-print("Data type of age : ", type(age))
-weight = int(weight)
-print(weight)
-print("Data type of weight : ", type(weight))
+df = pd.DataFrame(exam_data, index=labels)
+print("Summary of the basic information about this DataFrame and its data:")
+print(df.info())
