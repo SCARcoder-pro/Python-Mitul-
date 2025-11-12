@@ -1,20 +1,13 @@
-rowNum = 5
-space = rowNum - 1
+import random
+def pick_dice_experiment():
+    dice = ['1', '2', '3', '4', '5', '6']
+    result = random.choice(dice)
+    pro = dice.count('6') /len(dice)
+    print("Probability of getting a six:", pro)
+    if result == '6':
+        print("Congrats! You got 6!")
+    else:
+        print("Better luck next time.")
 
-for i in range(1, rowNum + 1):
-    for j in range(1, space + 1):
-        print(end=" ")
-    space = space - 1
-
-    for j in range(2*i+1):
-        print(end="*")
-    print()
-    space = 1
-
-    for i in range(1, rowNum):
-        for j in range(1, space + 1):
-            print(end=" ")
-        space = space + 1
-        for j in range(1, 2*(rowNum - i)):
-            print(end="*")
-        print()
+res = pick_dice_experiment()
+print(res)
