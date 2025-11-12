@@ -1,8 +1,7 @@
-Amount =int(input("Enter the amount: "))
-note_1 = Amount//100
-note_2 = (Amount%100)//50
-note_3 = ((Amount%100)%50)//10
+set1 = {'A', 'B', 'C', 'D', 'E'}
+set2 = {'D', 'E', 'F', 'G', 'H'}
 
-print("Notes of 100 rupees: ", note_1)
-print("Notes of 50 rupees: ", note_2)
-print("Notes of 10 rupees: ", note_3)
+union = set1.intersection(set2)
+total_guests = list(union) 
+print("Total guests to be invited to party are: ", len(total_guests))
+print("Guests list: ", total_guests)
