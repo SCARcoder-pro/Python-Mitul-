@@ -1,34 +1,16 @@
-from abc import ABC, abstractmethod
+RS = int(input("Enter the number of red shirts: "))
+BS = int(input("Enter the number of blue shirts: "))
+WS = int(input("Enter the number of white shirts: "))
 
-class Animal(ABC):
-    
-    def move(self):
-        pass
+total = RS+BS+WS
+prob_a = BS/total
+prob_b = WS/total
 
-class Human(Animal):
-    def move(self):
-        print("I can walk and run")
+prob_bga = prob_b
+prob_a_and_b = prob_a * prob_bga
 
-class Snake(Animal):
-    def move(self):
-        print("I can crawl")
+print("Probability that the second shirt is red given that the first shirt is blue: ")
+print(round(prob_bga),3)
 
-class Dog(Animal):
-    def move(self):
-        print("I can bark")
-
-class Lion(Animal):
-    def move(self):
-        print("I can roar")
-
-R = Human()
-R.move()
-
-K = Snake()
-K.move()
-
-R = Dog()
-R.move()
-
-K = Lion()
-K.move()
+print("Probability that the first shirt is blue and the second shirt is white: ")
+print(round(prob_a_and_b,3))
