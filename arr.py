@@ -1,7 +1,12 @@
-import array as arr
-array_num = arr.array('i', [1, 3, 5, 3, 7, 9, 3])
-print("Original array" + str(array_num))
-print("Number of occurances of the number 3 in the said array:" + str(array_num.count(3)))
-array_num.reverse()
-print("Reverse the number of the items: ")
-print(str(array_num))
+def prob_a_and_b(a, b, total):
+    prob_a = orange/total
+    prob_bga = blue/(total-1)
+    prob_AandB = prob_a * prob_bga
+    return round(prob_AandB,3)
+
+orange = int(input("Enter number of orange balls: "))
+blue = int(input("Enter number of blue balls: "))
+total = orange + blue
+
+print("Probablity of getting 1st orange and 2nd blue ball: ")
+print(prob_a_and_b(orange, blue, total))
