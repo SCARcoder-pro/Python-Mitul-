@@ -1,29 +1,11 @@
-import matplotlib.pyplot as plt
+prob_st = 0.2
 
-students_names = ['John', 'Emily', 'Michael', 'Sarah', 'David'] 
-students_marks = [85, 92, 78, 90, 88]
- 
-marks_perc = []
-for x in students_marks:
-    res = (x / 50) * 100
-    marks_perc.append(res)
+prob_st_pos = 0.2*0.85
+prob_nst_pos = 0.8*0.02
+prob_positive = prob_st_pos + prob_nst_pos
 
-print(marks_perc)
+prob_pos_given_st = 0.85
 
-def line_chart_of_students_and_marks():
-    plt.plot(students_names, students_marks)
-    plt.title("Students Marks Graphs")
-    plt.xlabel("Students Names")
-    plt.ylabel("Students Marks")
-    plt.show()
-
-line_chart_of_students_and_marks()
-
-def percentage_bar_chart():
-    plt.plot(students_names, students_marks)
-    plt.title("Students Percentage Graphs")
-    plt.xlabel("Students Names")
-    plt.ylabel("Students Marks")
-    plt.show()
-
-percentage_bar_chart()
+prob_result = (prob_st * prob_pos_given_st) / prob_positive
+print("Probablity of person testing positive having step throat is: "),
+round((prob_result),3)
