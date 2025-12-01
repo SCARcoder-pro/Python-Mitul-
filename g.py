@@ -1,10 +1,12 @@
-number1 = int(input("Enter the 1st number: "))
-number2 = int(input("Enter the 2nd number: "))
-number3 = int(input("Enter the 3rd number: "))
+import math
 
-if number1 > number2 and number1 > number3:
-    print("The 1st number is the greatest")
-elif number2 > number1 and number2 > number3:
-    print("The 2nd number is the greatest")
-elif number3 > number1 and number3 > number2:
-    print("The 3rd number is the greatest")
+n = 10
+p = 0.5
+
+prob_2 = math.comb(n, 2) * (p ** 2) * ((1 - p) ** (n - 2))
+prob_3 = math.comb(n, 3) * (p ** 3) * ((1 - p) ** (n - 3))
+prob_4 = math.comb(n, 4) * (p ** 4) * ((1 - p) ** (n - 4))
+
+prob_between_2_and_4 = prob_2 + prob_3 + prob_4
+
+print("Probability of observing between 2 and 4 heads in 10 coin flips is:", round(prob_between_2_and_4, 3))
