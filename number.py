@@ -1,15 +1,6 @@
-import random
-playing = True
-number = str(random.randint(10, 20))
+import scipy.stats as stats
+prob1 = stats.poisson.pmf(6,10)
+print("Probablity of raining for exactly 6 days:", prob1)
 
-print("I will generate a number between 10 and 20, and you have to guess the number one didit at  a time.")
-print("The game ends when you get 1 Hero.")
-while playing:
-    guess = input("Give me the best guess! \n")
-    if number == guess:
-        print("You win the game!")
-        print("The number was: " , number)
-        break
-
-    else:
-        print("Your guess isn't quite right, try again!")
+prob2 = stats.poisson.pmf(12, 10) + stats.poisson.pmf(13, 10) + stats.poisson.pmf(14, 10) 
+print("Probablity of raining for 12-14 days:", prob2)
