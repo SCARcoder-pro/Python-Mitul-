@@ -1,18 +1,6 @@
-my_set = {1, 2, 3}
-print(my_set)
+import scipy.stats as stats
+prob1 = stats.poisson.pmf(12, 10)
+print("Probablity of raining for more than 12 days in next 30 days:", prob1)
 
-my_set = {1.0, "Hello", (1, 2, 3)}
-print(my_set)
-
-my_set = {1, 2, 3, 4, 3, 2}
-print(my_set)
-
-my_set = set([1, 2, 3, 2])
-print(my_set,"\n")
-
-num_set = set([0, 1, 2, 3, 4, 5])
-print("Original set")
-print(num_set)
-num_set.pop()
-print("After removing the first element from the said set: ")
-print(num_set, "\n")
+prob2 = stats.poisson.pmf(12, 10) + stats.poisson.pmf(13, 10) + + stats.poisson.pmf(14, 10) + stats.poisson.pmf(15, 10) + stats.poisson.pmf(16, 10) + stats.poisson.pmf(17, 10) + stats.poisson.pmf(18, 10) 
+print("Probablity of raining for 12-18 days:", prob2)
